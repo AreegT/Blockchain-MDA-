@@ -1,0 +1,123 @@
+[comment encoding = UTF-8 /]
+[module generateBlockClass('http://www.eclipse.org/emf/2002/Ecore')]
+
+[template public generateBlockclass(anEClass : EClass)]
+[comment @main/]
+[file (anEClass.name.concat('.java'), false, 'UTF-8')]
+package acceleoProject.main;
+[for(anEClass->select(name='Block'))]
+import java.security.MessageDigest;  
+import java.security.NoSuchAlgorithmException;
+public class [anEClass->select(name='Block').name/]
+{
+//Every block contains Block No, Data, Hash, 
+//Previous Hash and timestamp to determine the 
+//moment in which block mined 
+	[for(anEClass->select(name='Block').eAllAttributes )] 
+	private [eType.name/] [name/];
+	[/for]
+	
+    public [anEClass.name/] ( [anEClass.eAttributes->select(name ='Block_No').eType.name/] [anEClass.eAttributes->select(name='Block_No').name/], [anEClass.eAttributes->select(name ='Data').eType.name/] [anEClass.eAttributes->select(name='Data').name/],
+	[anEClass.eAttributes->select(name ='Prev_Hash').eType.name/] [anEClass.eAttributes->select(name='Prev_Hash').name/])
+	{
+	this.[anEClass.eAttributes->select(name='Block_No').name/] = [anEClass.eAttributes->select(name='Block_No').name/]
+	this.[anEClass.eAttributes->select(name='Data').name/] = [anEClass.eAttributes->select(name='Data').name/];
+	this.[anEClass.eAttributes->select(name='Prev_Hash').name/] = [anEClass.eAttributes->select(name='Prev_Hash').name/];
+	this.[anEClass.eAttributes->select(name='Timestamp').name/] = System.currentTimeMillis();
+	this.[anEClass.eAttributes->select(name='Hash').name/] = [anEClass.eOperations->select(name='calculateHash').name/]();
+	}
+
+	[for(anEClass->select(name='Block').eAllAttributes )]
+	public [eType.name/] get[name.toUpperFirst()/](){
+		return this.[name/];
+	}
+	public void set[name.toUpperFirst()/]([eType.name/] [name.toLowerFirst()/]){
+		[name.toUpperFirst().concat(' = ')/][name.toLowerFirst()/] 
+	}
+	[/for]
+
+	public [anEClass.eOperations->select(name='calculateHash').eType.name/] [anEClass.eOperations->select(name='calculateHash').name/]()
+	{
+	[anEClass.eOperations->select(name='calculateHash').eType.name/] text = [anEClass.eOperations->select(name='calculateHash').eType.name.concat('.valueOf')/]([anEClass.eAttributes->select(name='Block_No').name/] + [anEClass.eAttributes->select(name='Prev_Hash').name/] +
+    [anEClass.eOperations->select(name='calculateHash').eType.name.concat('.valueOf')/]([anEClass.eAttributes->select(name='Timestamp').name/]) + [anEClass.eOperations->select(name='calculateHash').eType.name.concat('.valueOf')/]([anEClass.eAttributes->select(name='Data').name/])
+	MessageDigest digest = null;
+	try {
+			digest = MessageDigest.getInstance("[anEClass.eAllReferences->select(name='encryptor').eReferenceType.eOperations.name/]")
+	    	} catch (NoSuchAlgorithmException e) {
+	// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	final [anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='bytes').eType.name/] [anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='bytes').name.concat('[]')/] = digest.digest(text.get[anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='bytes').name/])
+    final StringBuilder hexString = new StringBuilder();
+	for(final [anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='bytes').eType.name/] b :[anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='bytes').name/]){
+  	[anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='hex').eType.name/] [anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='hex').name.concat('= Integer.toHexString(0xff &b);')/]
+	if ([anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='hex').name.concat('.length() == 1')/]) {
+		hexString.append('0');
+	}
+	 hexString.append([anEClass.eAllReferences->select(name='encryptor').eReferenceType.eAllAttributes->select(name='hex').name/]);
+	}
+		return hexString.toString();	
+
+	}
+}
+[/for]
+
+[for(anEClass->select(name='Online_Education_System'))]
+import java.util.ArrayList;  
+import java.util.List;
+
+public class [anEClass->select(name='Online_Education_System').name/]
+{
+	private List<[anEClass.eAllReferences->select(name='block').eReferenceType.name/]> blockchain =new ArrayList<>():
+    public List<[anEClass.eAllReferences->select(name='block').eReferenceType.name/]> [anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'getBlockChain').name.concat('()')/]{
+		return blockchain;
+	}
+	private [anEClass.eAllReferences->select(name='block').eReferenceType.name/] [anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'getLatestBlock').name.concat('()')/] {
+		if(blockchain.isEmpty()){
+			[anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'createGenesisBlock').name.concat('()')/]
+		}
+		return blockchain.get(blockchain.size()-1);
+	}
+	private void [anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'createGenesisBlock').name.concat('()')/] {
+	blockchain.add(new [anEClass.eAllReferences->select(name='block').eReferenceType.name.concat('("0","initial","0")')/] );
+	}
+	public void [anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'addBlock').name/]([anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'addBlock').eParameters.eType.name/] [anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'addBlock').eParameters.name/]){
+		[anEClass.eAllReferences->select(name='block').eReferenceType.name/] previousBlock = [anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'getLatestBlock').name.concat('()')/];
+		[anEClass.eAllReferences->select(name='block').eReferenceType.name/] newBlock = new [anEClass.eAllReferences->select(name='block').eReferenceType.name/](previousBlock.getBlock_No()+1,
+		[anEClass.eAllReferences->select(name='block').eReferenceType.eAllAttributes->select(name = 'Data').name/], previousBlock, getHash());
+    	blockchain.add(newBlock);
+	}
+	public [anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'isChainValid').eType.name/] [anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'isChainValid').name/] {
+	 for (int i=1; i<blockchain.size(); i++) {
+	 	[anEClass.eAllReferences->select(name='block').eReferenceType.name/] currentBlock = blockchain.get(i);
+		[anEClass.eAllReferences->select(name='block').eReferenceType.name/] previousBlock = blockchain.get(i-1); 
+		if(!currentBlock.getHash().equals(currentBlock.[anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'calculateHash').name/]()))	{
+			return false;
+		}
+		if (!currentBlock.getPrev_Hash().equals(previousBlock.grtHash())) {
+			return false;
+		}
+	}
+	return true;
+}
+	public static void main([anEClass.eAllReferences->select(name='block').eReferenceType.eOperations->select(name = 'calculateHash').eType.name.concat('[]')/] args){
+	[anEClass.name/] edublock = new [anEClass.name.concat('()')/];
+		edublock.addBlock("Student Ali Information");
+		edublock.addBlock("Student Saba Information");
+		edublock.addBlock("Student Ahmed Information");
+		edublock.addBlock("Student Sana Information");
+		edublock.addBlock("Professor Dr. Farooque Information");
+		edublock.addBlock("Professor Dr. Atif Information");
+		edublock.addBlock("NUST University Information");
+		edublock.addBlock("COMSATS University Information");
+		edublock.addBlock("Encrypted Question");
+	System.out.println(edublock.isChainValid());
+	chain.getBlockChain().get(1).setData("5000");
+	}
+}
+
+
+[/for]
+
+[/file]
+[/template]

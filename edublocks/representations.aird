@@ -4,7 +4,7 @@
     <semanticResources>My.blockchain</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_mlRJcMGxEeyvYP9viXorjg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/edublocks.design/description/edublocks.odesign#//@ownedViewpoints[name='edublocks']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_a-fBosGzEeyvYP9viXorjg" name="new blocktrip" repPath="#_a-fBoMGzEeyvYP9viXorjg" changeId="041024dd-c39f-40c4-b416-8ea8d31ade78">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_a-fBosGzEeyvYP9viXorjg" name="new blocktrip" repPath="#_a-fBoMGzEeyvYP9viXorjg" changeId="4110a38f-52d6-4922-b66d-4d48949a14d5">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/edublocks.design/description/edublocks.odesign#//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']"/>
         <target xmi:type="blockchain:Online_Education_System" href="My.blockchain#/"/>
       </ownedRepresentationDescriptors>
