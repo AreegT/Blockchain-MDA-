@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blockchain:Online_Education_System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:blockchain="http://www.example.org/blockchain">
+  <block Block_No="01" Data="Student1ProfessorUniversityRecord" Prev_Hash="000000" Hash="000123" block="//@block.1"/>
+  <block Block_No="02" Data="Student2Record" Prev_Hash="000123" Hash="000234" block="//@block.2"/>
+  <block Block_No="03" Data="Student3Record" Prev_Hash="000234" Hash="000345" block="//@block.3"/>
+  <block Block_No="04" Data="Student3Record" Prev_Hash="000234" Hash="000456" block="//@block.4"/>
+  <block Block_No="05" Data="Student5Record" Prev_Hash="000456" Hash="000567" block="//@block.5"/>
+  <block Block_No="06" Data="Student6Record" Prev_Hash="000567" Hash="000678" block="//@block.6"/>
+  <block Block_No="07" Data="Student7Record" Prev_Hash="000678" Hash="000789"/>
+  <students_credential Stu_Name="Saba" Stu_Password="bg38hg " stuDataEncrypt="//@validator.0" stuInformation="//@information.0"/>
+  <students_credential Stu_Name="Ali" Stu_Password="ut9fd4" stuDataEncrypt="//@validator.0" stuInformation="//@information.1"/>
+  <students_credential Stu_Name="Ahmed" Stu_Password="ygo9yd" stuDataEncrypt="//@validator.0" stuInformation="//@information.2"/>
+  <students_credential Stu_Name="Sana" Stu_Password="tr9kdb" stuDataEncrypt="//@validator.0" stuInformation="//@information.3"/>
+  <universities Uni_Name="Comsats" Uni_Rank="5" uniInformation="//@information.9"/>
+  <universities Uni_Name="NUST " Uni_Rank="2" uniInformation="//@information.8"/>
+  <professors Prof_Name="Dr. Farooque" Prof_Password="ute5bm" Prof_University="NUST CEME" Prof_Designation="Professor" profdataEncrypt="//@validator.1" profInformation="//@information.4"/>
+  <professors Prof_Name="Dr. Atif" Prof_Password="ksh6fu" Prof_University="Comsats" Prof_Designation="Associate Professor" profInformation="//@information.5"/>
+  <validator Validator_Id="001" block="//@block.0 //@block.1 //@block.2 //@block.3 //@block.4 //@block.5 //@block.6" key="056292" Encrypted_data="DataEncrypt"/>
+  <validator Validator_Id="002" key="870234" Encrypted_data="DataEncrypt"/>
+  <exam_solution answers="Exam answers" solutionInformation="//@information.7"/>
+  <smartcontract name="Smart Contract" block="//@block.0 //@block.1 //@block.2 //@block.3 //@block.4 //@block.5 //@block.6"/>
+  <information Data=" Saba Info" exam_network="//@exam_network.0"/>
+  <information Data="Ali Info" exam_network="//@exam_network.0"/>
+  <information Data="Ahmed Info" exam_network="//@exam_network.0"/>
+  <information Data="Sana Info" exam_network="//@exam_network.0"/>
+  <information Data="Prof Farooque Info" exam_network="//@exam_network.1"/>
+  <information Data="Prof Atif Info" exam_network="//@exam_network.1"/>
+  <information Data="Questions Info" exam_network="//@exam_network.1"/>
+  <information Data="Solution Info" exam_network="//@exam_network.1"/>
+  <information Data="NUST Info" exam_network="//@exam_network.2"/>
+  <information Data="Comstats Info" exam_network="//@exam_network.2"/>
+  <exam_questions Mcqs_based="Exam Questions" quesInformation="//@information.6" validprofessor="//@professors.0" questionEncrypt="//@validator.1"/>
+  <exam_network name="001" exam_network="//@exam_network.1"/>
+  <exam_network name="002" exam_network="//@exam_network.2"/>
+  <exam_network name="003" exam_network="//@exam_network.3"/>
+  <exam_network name="004" exam_network="//@exam_network.0" encryptnetwork="//@validator.0"/>
+</blockchain:Online_Education_System>
