@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="edublocks" version="12.0.0.2017041100">
+  <ownedViewpoints name="edublocks" modelFileExtension="blockchain">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="blocktrip" domainClass="blockchain::Online_Education_System" enablePopupBars="true">
+      <metamodel href="http://www.example.org/blockchain#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="BlockNode" semanticCandidatesExpression="feature:block" domainClass="blockchain::Block">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Block_No" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Block.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="StudentNode" semanticCandidatesExpression="feature:students_credential" domainClass="blockchain::Students_Credential">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Stu_Name" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Students_Credential.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="UniversityNode" semanticCandidatesExpression="feature:universities" domainClass="blockchain::Universities">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Uni_Name" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Universities.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ProfessorNode" semanticCandidatesExpression="feature:professors" domainClass="blockchain::Professors">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Prof_Name" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Professors.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="SolutionNode" semanticCandidatesExpression="feature:exam_solution" domainClass="blockchain::Exam_Solution">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:answers" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Exam_Solution.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ContractNode" semanticCandidatesExpression="feature:smartcontract" domainClass="blockchain::SmartContract">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/SmartContract.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="InformationNode" semanticCandidatesExpression="feature:information" domainClass="blockchain::Information">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Data" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Information.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="QuestionNode" semanticCandidatesExpression="feature:exam_questions" domainClass="blockchain::Exam_Questions">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Mcqs_based" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Exam_Questions.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="NetworkNode" semanticCandidatesExpression="feature:exam_network" domainClass="blockchain::Exam_Network">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Exam_Network.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ValidatorNode" semanticCandidatesExpression="feature:validator" domainClass="blockchain::Validator">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" labelExpression="feature:Validator_Id" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Encryptor_SHA256.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="EncryptorNode" semanticCandidatesExpression="feature:validator" domainClass="blockchain::Encryptor_SHA256">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:Encrypted_data" sizeComputationExpression="4" resizeKind="NSEW" workspacePath="/edublocks.design/icons/Encryptor_SHA256.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="block-block" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='BlockNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='BlockNode']" targetFinderExpression="feature:block">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="encryptor-block" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='EncryptorNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='BlockNode']" targetFinderExpression="feature:block">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="student-info" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='StudentNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='InformationNode']" targetFinderExpression="feature:stuInformation">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="professor-info" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='ProfessorNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='InformationNode']" targetFinderExpression="feature:profInformation">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="question-info" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='QuestionNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='InformationNode']" targetFinderExpression="feature:quesInformation">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="solution-info" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='SolutionNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='InformationNode']" targetFinderExpression="feature:solutionInformation">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="university-info" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='UniversityNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='InformationNode']" targetFinderExpression="feature:uniInformation">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="info-network" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='InformationNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='NetworkNode']" targetFinderExpression="feature:exam_network">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="network-network" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='NetworkNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='NetworkNode']" targetFinderExpression="feature:exam_network">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="network-encrypt" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='NetworkNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='EncryptorNode']" targetFinderExpression="feature:encryptnetwork">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="contract-block" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='ContractNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='BlockNode']" targetFinderExpression="feature:block">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="professor-encrypt" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='ProfessorNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='EncryptorNode']" targetFinderExpression="feature:profdataEncrypt">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ques-encrypt" sourceMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='QuestionNode']" targetMapping="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='EncryptorNode']" targetFinderExpression="feature:questionEncrypt">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Network" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='NetworkNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Exam_Network" referenceName="exam_network">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Block" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='BlockNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Block" referenceName="block">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Block_No"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Encryptor" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='EncryptorNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Encryptor_SHA256" referenceName="validator">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Validator_Id"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Smart Contract" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='ContractNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::SmartContract" referenceName="smartcontract">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Information" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='InformationNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Information" referenceName="information">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Data"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Universities" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='UniversityNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Universities" referenceName="universities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Uni_Name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Professors" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='ProfessorNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Professors" referenceName="professors">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Prof_Name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Exam Questions" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='QuestionNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Exam_Questions" referenceName="exam_questions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Mcqs_based"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Student" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='StudentNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Students_Credential" referenceName="students_credential">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="Stu_Name"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Exam Solution" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@nodeMappings[name='SolutionNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="blockchain::Exam_Solution" referenceName="exam_solution">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="answers"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="block-block" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='block-block']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="block" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Encrypt-block" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='encryptor-block']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="block" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contract-block" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='contract-block']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="block" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Network-Encrypt" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='network-encrypt']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="encryptnetwork" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Student-Information" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='student-info']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="stuInformation" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Professor-Information" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='professor-info']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="profInformation" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="University-Information" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='university-info']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="uniInformation" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Question-QuesInfo" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='question-info']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="quesInformation" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Answers-AnsInfo" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='solution-info']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="solutionInformation" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Question-Encrypt" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='ques-encrypt']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="questionEncrypt" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Professor-Encrypt" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='professor-encrypt']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="profdataEncrypt" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Information-Network" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='edublocks']/@ownedRepresentations[name='blocktrip']/@defaultLayer/@edgeMappings[name='info-network']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="exam_network" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="edublocks.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
