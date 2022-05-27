@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blockchain:Online_Education_System
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:blockchain="http://www.example.org/blockchain"
+    xsi:schemaLocation="http://www.example.org/blockchain blockchain.ecore">
+  <exam_solution/>
+  <exam_questions/>
+</blockchain:Online_Education_System>

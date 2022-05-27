@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blockchain:Online_Education_System
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:blockchain="http://www.example.org/blockchain"
+    xsi:schemaLocation="http://www.example.org/blockchain blockchain.ecore">
+  <block Block_No="Block 1"
+      Data="data"
+      Prev_Hash="000000"
+      Hash="000123"
+      block="//@block.0"/>
+  <block Block_No="block 2"
+      Data="data"
+      Prev_Hash="000123"
+      Hash="000234"
+      block="//@block.0"/>
+  <block Block_No="block 3"
+      Data="data"
+      Prev_Hash="000234"
+      Hash="000345"/>
+  <block Block_No="block 4"
+      Data="data"
+      Prev_Hash="000345"
+      Hash="000456"
+      block="//@block.2"/>
+  <block Block_No="block 5"
+      Data="data"
+      Prev_Hash="000456"
+      Hash="000567"
+      block="//@block.3"/>
+  <block Block_No="block 6"
+      Data="data"
+      Prev_Hash="000567"
+      Hash="000678"
+      block="//@block.4"/>
+  <students_credential
+      Stu_Name="Ali"
+      Stu_Password="bdh6yu"
+      stuDataEncrypt="//@validator.0"
+      stuInformation="//@information.0"/>
+  <students_credential
+      Stu_Name="Amna"
+      Stu_Password="gftu7iu"
+      stuDataEncrypt="//@validator.0"
+      stuInformation="//@information.2"/>
+  <students_credential
+      Stu_Name="zahra"
+      Stu_Password="d4kjbv"
+      stuDataEncrypt="//@validator.0"
+      stuInformation="//@information.2"/>
+  <universities
+      Uni_Name="Bahria University"
+      Uni_Rank="9"
+      uniInformation="//@information.3"/>
+  <universities
+      Uni_Name="Comsats University"
+      Uni_Rank="4"
+      uniInformation="//@information.4"/>
+  <universities
+      Uni_Name="CUST University"
+      Uni_Rank="9"
+      uniInformation="//@information.5"/>
+  <professors
+      Prof_Name="Dr Ahmed "
+      Prof_Password="hgd5bh"
+      Prof_University="Bahria"
+      Prof_Designation="Associate Professor"
+      profdataEncrypt="//@validator.0"
+      profInformation="//@information.6"/>
+  <validator
+      xsi:type="blockchain:Encryptor_SHA256"
+      Validator_Id="1"
+      Key="110"
+      Encrypted_data="encrypted"/>
+  <exam_solution/>
+  <smartcontract/>
+  <information
+      Data="Ali"
+      exam_network="//@exam_network.0"/>
+  <information
+      Data="Amna"
+      exam_network="//@exam_network.0"/>
+  <information
+      Data="Zahra"
+      exam_network="//@exam_network.0"/>
+  <information
+      Data="Bahria"
+      exam_network="//@exam_network.0"/>
+  <information
+      Data="Comsats"
+      exam_network="//@exam_network.0"/>
+  <information
+      Data="cust"
+      exam_network="//@exam_network.0"/>
+  <information
+      Data="dr ahmed"
+      exam_network="//@exam_network.0"/>
+  <information
+      Data="ques"
+      exam_network="//@exam_network.0"/>
+  <exam_questions
+      Mcqs_based="mcq base"
+      quesInformation="//@information.7"/>
+  <exam_network
+      name="all members"
+      exam_network="//@exam_network.0"/>
+</blockchain:Online_Education_System>

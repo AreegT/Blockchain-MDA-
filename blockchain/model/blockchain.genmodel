@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/blockchain/src-gen" creationIcons="false" editDirectory="/blockchain.edit/src-gen"
+    editorDirectory="/blockchain.editor/src-gen" modelPluginID="blockchain" modelName="Blockchain"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>blockchain.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Blockchain" disposableProviderFactory="true" ecorePackage="blockchain.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="blockchain.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//Type/External_Exam"/>
+      <genEnumLiterals ecoreEnumLiteral="blockchain.ecore#//Type/Internal_Exam"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="blockchain.ecore#//Image"/>
+    <genClasses ecoreClass="blockchain.ecore#//Online_Education_System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/block"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/students_credential"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/universities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/professors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/validator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/exam_solution"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/smartcontract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/information"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/exam_questions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Online_Education_System/exam_network"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Block">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Block/Block_No"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Block/Data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Block/Prev_Hash"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Block/Hash"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Block/block"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference blockchain.ecore#//Block/information"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Block/encryptor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Block/timestamp"/>
+      <genOperations ecoreOperation="blockchain.ecore#//Block/calculateHash"/>
+      <genOperations ecoreOperation="blockchain.ecore#//Block/getBlockChain"/>
+      <genOperations ecoreOperation="blockchain.ecore#//Block/createGenesisBlock"/>
+      <genOperations ecoreOperation="blockchain.ecore#//Block/addBlock">
+        <genParameters ecoreParameter="blockchain.ecore#//Block/addBlock/Data"/>
+      </genOperations>
+      <genOperations ecoreOperation="blockchain.ecore#//Block/isChainValid"/>
+      <genOperations ecoreOperation="blockchain.ecore#//Block/getLatestBlock"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Students_Credential">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Students_Credential/Stu_Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Students_Credential/Stu_Password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Students_Credential/Stu_Image"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Students_Credential/stuDataEncrypt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Students_Credential/stuInformation"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Universities">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Universities/Uni_Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Universities/Uni_Rank"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Universities/uniInformation"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Professors">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Professors/Prof_Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Professors/Prof_Password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Professors/Prof_University"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Professors/Prof_Designation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Professors/profdataEncrypt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Professors/profInformation"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Encryptor_SHA256">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Encryptor_SHA256/Validator_Id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Encryptor_SHA256/block"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Encryptor_SHA256/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Encryptor_SHA256/Encrypted_data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Encryptor_SHA256/hex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Encryptor_SHA256/bytes"/>
+      <genOperations ecoreOperation="blockchain.ecore#//Encryptor_SHA256/sha256">
+        <genParameters ecoreParameter="blockchain.ecore#//Encryptor_SHA256/sha256/input"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//SmartContract">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//SmartContract/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//SmartContract/block"/>
+      <genOperations ecoreOperation="blockchain.ecore#//SmartContract/verifyStudentIdentity">
+        <genParameters ecoreParameter="blockchain.ecore#//SmartContract/verifyStudentIdentity/Stu_Name"/>
+        <genParameters ecoreParameter="blockchain.ecore#//SmartContract/verifyStudentIdentity/Stu_Psw"/>
+        <genParameters ecoreParameter="blockchain.ecore#//SmartContract/verifyStudentIdentity/Stu_Image"/>
+      </genOperations>
+      <genOperations ecoreOperation="blockchain.ecore#//SmartContract/verifyValidProf">
+        <genParameters ecoreParameter="blockchain.ecore#//SmartContract/verifyValidProf/Prof_name"/>
+        <genParameters ecoreParameter="blockchain.ecore#//SmartContract/verifyValidProf/Prof_Psw"/>
+      </genOperations>
+      <genOperations ecoreOperation="blockchain.ecore#//SmartContract/validProf">
+        <genParameters ecoreParameter="blockchain.ecore#//SmartContract/validProf/update_exam"/>
+      </genOperations>
+      <genOperations ecoreOperation="blockchain.ecore#//SmartContract/verifyExamSolution"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Exam_Questions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Exam_Questions/Mcqs_based"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Exam_Questions/Fill_in_blank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Exam_Questions/Exam_Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Exam_Questions/quesInformation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Exam_Questions/validprofessor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Exam_Questions/questionEncrypt"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Exam_Solution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Exam_Solution/answers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Exam_Solution/solutionInformation"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Information">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Information/Data"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Information/exam_network"/>
+    </genClasses>
+    <genClasses ecoreClass="blockchain.ecore#//Exam_Network">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute blockchain.ecore#//Exam_Network/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Exam_Network/exam_network"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference blockchain.ecore#//Exam_Network/encryptnetwork"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

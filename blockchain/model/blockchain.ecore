@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="blockchain" nsURI="http://www.example.org/blockchain" nsPrefix="blockchain">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Online_Education_System">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1" upperBound="-1"
+        eType="#//Block" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="students_credential" lowerBound="1"
+        upperBound="-1" eType="#//Students_Credential" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="universities" lowerBound="1"
+        upperBound="-1" eType="#//Universities" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="professors" lowerBound="1"
+        upperBound="-1" eType="#//Professors" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validator" lowerBound="1"
+        upperBound="-1" eType="#//Encryptor_SHA256" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exam_solution" lowerBound="1"
+        upperBound="-1" eType="#//Exam_Solution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="smartcontract" lowerBound="1"
+        upperBound="-1" eType="#//SmartContract" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="information" lowerBound="1"
+        upperBound="-1" eType="#//Information" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exam_questions" lowerBound="1"
+        upperBound="-1" eType="#//Exam_Questions" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exam_network" lowerBound="1"
+        upperBound="-1" eType="#//Exam_Network" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Block">
+    <eOperations name="calculateHash" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getBlockChain"/>
+    <eOperations name="createGenesisBlock"/>
+    <eOperations name="addBlock">
+      <eParameters name="Data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="isChainValid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="getLatestBlock"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Block_No" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prev_Hash" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Hash" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1" upperBound="-1"
+        eType="#//Block"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="information" lowerBound="1"
+        upperBound="-1" eType="#//Information" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="encryptor" lowerBound="1"
+        upperBound="-1" eType="#//Encryptor_SHA256"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Students_Credential">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Stu_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Stu_Password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Stu_Image" eType="#//Image"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stuDataEncrypt" lowerBound="1"
+        upperBound="-1" eType="#//Encryptor_SHA256"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stuInformation" lowerBound="1"
+        upperBound="-1" eType="#//Information"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Universities">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Uni_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Uni_Rank" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uniInformation" lowerBound="1"
+        upperBound="-1" eType="#//Information"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Professors">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prof_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prof_Password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prof_University" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prof_Designation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="profdataEncrypt" lowerBound="1"
+        upperBound="-1" eType="#//Encryptor_SHA256"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="profInformation" lowerBound="1"
+        upperBound="-1" eType="#//Information"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Encryptor_SHA256">
+    <eOperations name="sha256" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="input" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Validator_Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1" upperBound="-1"
+        eType="#//Block"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Encrypted_data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bytes" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SmartContract">
+    <eOperations name="verifyStudentIdentity">
+      <eParameters name="Stu_Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="Stu_Psw" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="Stu_Image" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="verifyValidProf">
+      <eParameters name="Prof_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="Prof_Psw" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="validProf">
+      <eParameters name="update_exam" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="verifyExamSolution"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1" upperBound="-1"
+        eType="#//Block"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exam_Questions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Mcqs_based" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Fill_in_blank" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Exam_Type" eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quesInformation" lowerBound="1"
+        upperBound="-1" eType="#//Information"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validprofessor" lowerBound="1"
+        upperBound="-1" eType="#//Professors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionEncrypt" lowerBound="1"
+        upperBound="-1" eType="#//Encryptor_SHA256"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exam_Solution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="answers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="solutionInformation" lowerBound="1"
+        upperBound="-1" eType="#//Information"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Information">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exam_network" lowerBound="1"
+        upperBound="-1" eType="#//Exam_Network"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exam_Network">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exam_network" lowerBound="1"
+        upperBound="-1" eType="#//Exam_Network"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="encryptnetwork" lowerBound="1"
+        upperBound="-1" eType="#//Encryptor_SHA256"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Type">
+    <eLiterals name="External_Exam"/>
+    <eLiterals name="Internal_Exam" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Image" instanceTypeName="newDataType3"/>
+</ecore:EPackage>
